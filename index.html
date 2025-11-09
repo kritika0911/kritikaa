@@ -1,0 +1,299 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Munchies - Satisfy Your Midnight Hunger!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">MIDNIGHT MUNCHIES</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <label for="cart-toggle" class="cart-icon">
+                    🛒
+                    <span class="cart-count" id="cart-count">0</span>
+                </label>
+            </nav>
+        </header>
+
+        <section class="hero" id="home">
+            <div class="container"> 
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1>MIDNIGHT MUNCHIES</h1>
+                        <p class="tagline handwritten">Satisfy Your Midnight Hunger!</p>
+                        <p> Order from your favorite restaurants and get food delivered right to your doorstep, even at midnight</p>
+                        <a href="#menu" class="cta-button">Order Now</a>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://b.zmtcdn.com/webFrontend/d026b357feb0d63c997549f6398da8cc1647364915.jpeg?output-format=webp&fit=around|402:360&crop=402:360;*,*" alt="Delicious Food">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories" id="categories">
+            <div class="container">
+                <h2 class="section-title">Popular Categories</h2>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-icon glow">🍕</div>
+                        <div class="category-name">Pizza</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🍔</div>
+                        <div class="category-name">Burgers</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🍜</div>
+                        <div class="category-name">Noodles</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🥗</div>
+                        <div class="category-name">Salads</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🍰</div>
+                        <div class="category-name">Desserts</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🥤</div>
+                        <div class="category-name">Beverages</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🎂</div>
+                        <div class="category-name">Cakes</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🧋</div>
+                        <div class="category-name">Shakes</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🍟</div>
+                        <div class="category-name">Fries</div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-icon glow">🥪</div>
+                        <div class="category-name">Breads</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="menu">
+            <div class="container">
+                <h2 class="section-title">Our Menu</h2>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://images.deliveryhero.io/image/fd-my/LH/wmw3-listing.jpg" alt="Classic Burger">
+                            <span class="badge">Bestseller</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Midnight Burger</h3>
+                                <span class="menu-item-price">$12.99</span>
+                            </div>
+                            <p class="menu-item-description">Juicy beef patty with fresh lettuce, tomato, and our special sauce</p>
+                            <button class="add-to-cart" onclick="addToCart('Midnight Burger', 12.99, 'midnightburger')">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://s7d1.scene7.com/is/image/mcdonalds/mcdonalds-double-cheeseburger:1-3-product-tile-desktop?wid=829&hei=515&dpr=off" alt="Double Cheese Burger">
+                            <span class="badge">Popular</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Double Cheese Burger</h3>
+                                <span class="menu-item-price">$14.99</span>
+                            </div>
+                            <p class="menu-item-description">Double beef patty with extra cheese, pickles, and caramelized onions</p>
+                            <button class="add-to-cart" onclick="addToCart('Double Cheese Burger', 14.99, 'doublecheese')">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://kitchendivas.com/wp-content/uploads/2016/09/Peanut-Butter-Bacon-Burgerx.jpg" alt="BBQ Bacon Burger">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">BBQ Bacon Burger</h3>
+                                <span class="menu-item-price">$15.99</span>
+                            </div>
+                            <p class="menu-item-description">Beef patty with crispy bacon, BBQ sauce, onion rings, and cheddar</p>
+                            <button class="add-to-cart" onclick="addToCart('BBQ Bacon Burger', 15.99, 'bbqburger')">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://popmenucloud.com/cdn-cgi/image/width%3D1200%2Cheight%3D1200%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/bhcgpkjt/9c03b953-1de2-48c0-963e-38a63de810df.jpg" alt="Margherita Pizza">
+                            <span class="badge">Popular</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Night Owl Pizza</h3>
+                                <span class="menu-item-price">$15.99</span>
+                            </div>
+                            <p class="menu-item-description">Fresh mozzarella, tomato sauce, and basil on crispy crust</p>
+                            <button class="add-to-cart" onclick="addToCart('Night Owl Pizza', 15.99, 'nightowlpizza')">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://chefadora.b-cdn.net/medium_1000529681_7684043161.jpg" alt="Meat Lovers Pizza">
+                            <span class="badge">Bestseller</span>
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Meat Lovers Pizza</h3>
+                                <span class="menu-item-price">$18.99</span>
+                            </div>
+                            <p class="menu-item-description">Pepperoni, sausage, bacon, ham, and ground beef with extra cheese</p>
+                            <button class="add-to-cart" onclick="addToCart('Meat Lovers Pizza', 18.99, 'meatlover')">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-image">
+                            <img src="https://bakeido.com/cdn/shop/files/Farmhouse_Pizza_d404cfa0-7dc0-4771-a129-e750d44215e0.webp?v=1740388279" alt="Veggie Delight Pizza">
+                        </div>
+                        <div class="menu-item-content">
+                            <div class="menu-item-header">
+                                <h3 class="menu-item-title">Veggie Delight Pizza</h3>
+                                <span class="menu-item-price">$14.99</span>
+                            </div>
+                            <p class="menu-item-description">A colorful mix of bell peppers, onions, mushrooms, and black olives</p>
+                            <button class="add-to-cart" onclick="addToCart('Veggie Delight Pizza', 14.99, 'vegdelight')">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p>We're here to satisfy your late-night cravings and answer any questions you may have. Feel free to reach out!</p>
+                        <div class="contact-info-item">
+                            <span class="glow">📍</span>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>123 Midnight Street, City Lights, MM 90210</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="glow">📞</span>
+                            <div>
+                                <h4>Call Us</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="glow">📧</span>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>support@midnightmunchies.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Delivering hot and delicious food right to your door when everything else is closed. Midnight Munchies is your late-night hero.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#menu">Full Menu</a></li>
+                        <li><a href="#categories">Food Categories</a></li>
+                        <li><a href="#">Delivery Zones</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: support@munchies.com</li>
+                        <li>Phone: +1 555-123-4567</li>
+                        <li>Address: 123 Midnight St.</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Midnight Munchies. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <input type="checkbox" id="cart-toggle">
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h2>Your Cart 🛒</h2>
+            <label for="cart-toggle" class="cart-close">✖</label>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p style="text-align: center; color: var(--text-gray);">Your cart is empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
